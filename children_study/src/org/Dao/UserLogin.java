@@ -8,6 +8,11 @@ public class UserLogin {
 	String pwd = "949462395";
 
 	public boolean Login(String id, String password) {
+		/*
+		 * 传入用户名以及密码
+		 * 传出是否匹配
+		 * true表示匹配成功
+		 */
 		boolean existance = false;
 		String sql = "select * from userinfo where username='" + id + "' and password='" + password + "';";
 		try {
