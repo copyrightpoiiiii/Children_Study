@@ -16,27 +16,27 @@ You can find the code in ChildrenStudy/Java Resources/Src/org.Dao
 
 GetProblem:
 
-    ArrayList<String> Query(int grade) </br>
-        this function will return randomly with 30 problems in given grade</br>
-        each problem is a String and this function will return them in a array</br>
+    ArrayList<String> Query(int grade) <br/>
+        this function will return randomly with 30 problems in given grade<br/>
+        each problem is a String and this function will return them in a array<br/>
 
 Judge:
 
-    boolean Query(String problem,int answer)</br>
-        this function will check the given answer with correct answer of given problem</br>
-        if given answer is correct, it will return true.Else it will return false.</br>
+    boolean Query(String problem,int answer)<br/>
+        this function will check the given answer with correct answer of given problem<br/>
+        if given answer is correct, it will return true.Else it will return false.<br/>
 
 Register:
 
-    boolean new_user_register(String id, String password,int grade)</br>
-        this function needs user's id, password and grade.</br>
-        if there is no repetitive user id ,it will return true.</br>
+    boolean new_user_register(String id, String password,int grade)<br/>
+        this function needs user's id, password and grade.<br/>
+        if there is no repetitive user id ,it will return true.<br/>
 
 UserLogin:
 
-    boolean Login(String id, String password)</br>
-        this function will match id with password</br>
-        if they are matched ,it will return true.</br>
+    boolean Login(String id, String password)<br/>
+        this function will match id with password<br/>
+        if they are matched ,it will return true.<br/>
 
 A simple login web will be found in ChildrenStudy/WebContent/check.jsp|index.jsp
 
