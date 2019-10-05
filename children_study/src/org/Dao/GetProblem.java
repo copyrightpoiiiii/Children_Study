@@ -1,4 +1,10 @@
-import java.sql.*;
+package org.Dao;
+
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.ArrayList;
 
 public class GetProblem {
@@ -11,12 +17,12 @@ public class GetProblem {
 		ArrayList<String> problem = new ArrayList<String>();
 		String sql = "SELECT * FROM `problem` WHERE  level = "+grade+""+" ORDER BY Rand() LIMIT 30";
 		try {
-			Class.forName(drv).newInstance();
+			Class.forName(drv);
 			Connection connect = DriverManager.getConnection(url, usr, pwd);
 			Statement stm = connect.createStatement();
 			ResultSet rs = stm.executeQuery(sql);
 			while(rs.next()) {
-				problem.add(rs.getString(1));
+				problem.add(rs.getString(""));
 			}
 			rs.close();
 			stm.close();
