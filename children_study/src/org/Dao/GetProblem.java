@@ -27,7 +27,7 @@ public class GetProblem {
 			Statement stm = connect.createStatement();
 			ResultSet rs = stm.executeQuery(sql);
 			while(rs.next()) {
-				problem.add(rs.getString(""));
+				problem.add(rs.getString("problem"));
 			}
 			rs.close();
 			stm.close();

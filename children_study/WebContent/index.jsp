@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="check.jsp" method="post"> 
+	<form action="WEB-DAO/check.jsp" method="post"> 
 		username:<input type="text" name="uname" />
 		<br />
 		password:<input type="password" name="upwd" />
