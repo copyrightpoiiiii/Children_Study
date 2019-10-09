@@ -1,0 +1,50 @@
+.title{
+    position: relative;
+    text-align: center;
+    margin: auto;
+    width: 50%;
+    border-bottom-style:dotted;
+    border-color: #a5d63f;
+    border-bottom-width: 2px;
+}
+#problems{
+    padding: 20px 0 0 40px;
+}
+.pb{
+    margin: 20px 10px;
+    display: inline-block;
+    width: 30%;
+}
+.pbbtn{
+    display: block;
+    position:center;
+    font-weight: lighter;
+    font-size: 20px;
+    color: #5e5e5e;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:20px;
+    padding: 10px;
+    border-color: #ffffff;
+    border-radius: 12px;
+    outline: none;
+    background-color: rgba(178,255,106,0.73);
+}
+.pbbtn:hover{
+    box-shadow: 0 6px 12px 0 #527734;
+}
+/*输入框*/
+input[type=text]{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: #5e5e5e;
+    margin: 0 30px;
+    width: 50px;
+}
+input[type=text]:focus{
+    outline: none;
+}
+.ansEmpty{
+    background-color: rgba(255,246,0,0.4);
+}
