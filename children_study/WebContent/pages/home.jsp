@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -145,7 +147,7 @@
 <div id="pbx1" class="popbox">
     <input class="closebtn" type="button" onclick="closebox(this)" value="×"/>
     <div id="login" class="box">
-        <form action="check.jsp" method="post">
+        <form action="../WEB-DAO/check.jsp" method="post">
             <label for="username">用户名</label>
             <input type="text" id="username" name="uname" placeholder="用户名">
             <label for="passwd" >密码</label>
@@ -157,16 +159,16 @@
 <div id="pbx2" class="popbox">
     <input class="closebtn" type="button" onclick="closebox(this)" value="×"/>
     <div id="reg" class="box">
-        <form action="check.jsp" method="post">
+        <form action="../WEB-DAO/register.jsp" method="post">
             <label for="regname">用户名</label>
             <input type="text" id="regname" name="regname" placeholder="用户名">
             <label for="grade">年级</label>
-            <select class="form-control" id="grade">
+            <select class="form-control" id="grade" name="grade">
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
             </select>
-            <label for="pw1">请填写密码</label>
+            <label for="pw1"></br>请填写密码></label>
             <input type="password" id="pw1" name="upw1" placeholder="请填写密码">
             <label for="pw2">请确认密码</label>
             <input type="password" id="pw2" name="upw2" placeholder="请确认密码">
