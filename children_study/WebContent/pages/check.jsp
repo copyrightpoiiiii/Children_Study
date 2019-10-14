@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ page import="org.Dao.UserLogin" %>
-
+<%@ page import="org.Dao.UserLogin"%>
+<%@ page import="org.Dao.QueryInfo"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,15 +12,16 @@
 	<%
 		String name = request.getParameter("uname");
 		String pwd = request.getParameter("upwd");
-		UserLogin log=new UserLogin();
+		UserLogin log = new UserLogin();
 		boolean result = log.Login(name, pwd);
-		if(result == true){
-			out.print("success!");
+		if (result == true) {
+			session.setAttribute("username",name);
+ 			pageContext.forward("welcome.jsp");
+		} else {
+	%>
+	<%
+			pageContext.forward("home.jsp");
 		}
-		else {
-			out.print("failed!");
-		}
-		
 	%>
 
 </body>

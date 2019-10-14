@@ -13,21 +13,44 @@ public class QueryInfo {
 	String usr = "root";
 	String pwd = "949462395";
 
-	public ArrayList<String> Query(int grade) {
+	public double Query_Correct(String username) {
 		/*
 		 * 返回一个包含30条String的数组
 		 * 每道题目为一个String
 		 * 保证难度为grade
 		 */
-		ArrayList<String> problem = new ArrayList<String>();
-		String sql = "SELECT * FROM `problem` WHERE  level = "+grade+""+" ORDER BY Rand() LIMIT 30";
+		String sql = "SELECT * FROM `userinfo` WHERE  username = "+username+ "'";
+		double ratio=0;
 		try {
 			Class.forName(drv);
 			Connection connect = DriverManager.getConnection(url, usr, pwd);
 			Statement stm = connect.createStatement();
 			ResultSet rs = stm.executeQuery(sql);
-			while(rs.next()) {
-				problem.add(rs.getString(""));
+			if(rs.next()) {
+				int tot=rs.getInt("total_prob");
+				int cor=rs.getInt("correct_prob");
+				if(tot!=0)
+				ratio=(double)cor/tot;
+				
+			}
+			rs.close();
+			stm.close();
+			connect.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return ratio;
+	}
+	
+	/*public ArrayList<String> Query_Wrong_Problem(String username) {
+		String sql = "SELECT * FROM `userinfo` WHERE  username = "+username+ "'";
+		try {
+			Class.forName(drv);
+			Connection connect = DriverManager.getConnection(url, usr, pwd);
+			Statement stm = connect.createStatement();
+			ResultSet rs = stm.executeQuery(sql);
+			if(rs.next()) {
+				
 			}
 			rs.close();
 			stm.close();
@@ -36,5 +59,5 @@ public class QueryInfo {
 			e.printStackTrace();
 		}
 		return problem;
-	}
+	}*/
 }

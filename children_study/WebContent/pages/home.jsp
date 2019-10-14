@@ -3,24 +3,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChildrenStudy</title>
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <style>@import url(../css/home.css);</style>
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/jquery-3.4.1.min.js"></script>
-    <script src="../js/home.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ChildrenStudy</title>
+<link rel="stylesheet" href="../css/bootstrap.min.css">
+<style>
+@import url(../css/home.css);
+</style>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/jquery-3.4.1.min.js"></script>
+<script src="../js/home.js"></script>
 </head>
 <body>
-<ul>
-    <li><a href="#" onclick="login()">登录</a></li>
-    <li><a href="#" onclick="reg()">注册</a> </li>
-</ul>
-<svg id="svg" version="1.1" xmlns="http://www.w3.org/2000/svg"
-     width="1200" height="200" viewBox="0, 0,370,100">
+	<ul>
+		<li><a href="#" onclick="login()">登录</a></li>
+		<li><a href="#" onclick="reg()">注册</a></li>
+	</ul>
+	<svg id="svg" version="1.1" xmlns="http://www.w3.org/2000/svg"
+		width="1200" height="200" viewBox="0, 0,370,100">
     <g id="svgg">
-        <path id="path1" class="path" d="M84.788 60.630 C 82.067 61.220,81.335 61.419,81.225 61.597
+        <path id="path1" class="path"
+			d="M84.788 60.630 C 82.067 61.220,81.335 61.419,81.225 61.597
         C 81.159 61.704,80.957 61.792,80.777 61.792 C 80.597 61.792,79.834 62.156,79.081 62.600
         C 70.832 67.470,68.909 79.105,75.160 86.317 C 75.443 86.644,75.867 87.131,76.104 87.401
         C 77.240 88.701,80.633 90.569,82.971 91.182 C 86.440 92.091,94.358 91.027,95.008 89.564
@@ -138,43 +141,45 @@
             L 133.137 71.816 133.199 80.601 M159.214 79.725 C 160.162 80.233,159.629 81.604,158.483 81.604
             C 157.492 81.604,157.022 80.522,157.756 79.927 C 158.389 79.415,158.583 79.388,159.214 79.725 M301.431 79.725
              C 302.379 80.233,301.846 81.604,300.700 81.604 C 299.709 81.604,299.239 80.522,299.973 79.927
-             C 300.606 79.415,300.800 79.388,301.431 79.725 " stroke="#ffffff" stroke-width="2.5" fill="#a5d63f" fill-rule="evenodd">
+             C 300.606 79.415,300.800 79.388,301.431 79.725 "
+			stroke="#ffffff" stroke-width="2.5" fill="#a5d63f"
+			fill-rule="evenodd">
         </path>
     </g>
 </svg>
-<div style="text-align: center;margin-top: 50px;"><a href="#" class="mybtn">开始做题</a></div>
-<div id="poplayer" class="poplayer"></div>
-<div id="pbx1" class="popbox">
-    <input class="closebtn" type="button" onclick="closebox(this)" value="×"/>
-    <div id="login" class="box">
-        <form action="../WEB-DAO/check.jsp" method="post">
-            <label for="username">用户名</label>
-            <input type="text" id="username" name="uname" placeholder="用户名">
-            <label for="passwd" >密码</label>
-            <input type="password" id="passwd" name="upwd" placeholder="密码">
-            <input type="submit" value="登录">
-        </form>
-    </div>
-</div>
-<div id="pbx2" class="popbox">
-    <input class="closebtn" type="button" onclick="closebox(this)" value="×"/>
-    <div id="reg" class="box">
-        <form action="../WEB-DAO/register.jsp" method="post">
-            <label for="regname">用户名</label>
-            <input type="text" id="regname" name="regname" placeholder="用户名">
-            <label for="grade">年级</label>
-            <select class="form-control" id="grade" name="grade">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-            </select>
-            <label for="pw1"></br>请填写密码></label>
-            <input type="password" id="pw1" name="upw1" placeholder="请填写密码">
-            <label for="pw2">请确认密码</label>
-            <input type="password" id="pw2" name="upw2" placeholder="请确认密码">
-            <input type="submit" value="注册">
-        </form>
-    </div>
-</div>
+	<div style="text-align: center; margin-top: 50px;">
+		<a href="choice.jsp" class="mybtn">开始做题</a>
+	</div>
+	<div id="poplayer" class="poplayer"></div>
+	<div id="pbx1" class="popbox">
+		<input class="closebtn" type="button" onclick="closebox(this)"
+			value="×" />
+		<div id="login" class="box">
+			<form action="check.jsp" method="post">
+				<label for="username">用户名</label> <input type="text" id="username"
+					name="uname" placeholder="用户名"> <label for="passwd">密码</label>
+				<input type="password" id="passwd" name="upwd" placeholder="密码">
+				<input type="submit" value="登录">
+			</form>
+		</div>
+	</div>
+	<div id="pbx2" class="popbox">
+		<input class="closebtn" type="button" onclick="closebox(this)"
+			value="×" />
+		<div id="reg" class="box">
+			<form action="register.jsp" method="post">
+				<label for="regname">用户名</label> <input type="text" id="regname"
+					name="regname" placeholder="用户名"> <label for="grade">年级</label>
+				<select class="form-control" id="grade" name="grade">
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+				</select> <label for="pw1"><br></br>请填写密码></label> <input type="password" id="pw1"
+					name="upw1" placeholder="请填写密码"> <label for="pw2">请确认密码</label>
+				<input type="password" id="pw2" name="upw2" placeholder="请确认密码">
+				<input type="submit" value="注册">
+			</form>
+		</div>
+	</div>
 </body>
 </html>
