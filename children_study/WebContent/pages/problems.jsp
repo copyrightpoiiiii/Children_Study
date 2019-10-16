@@ -13,6 +13,8 @@
 <link rel="stylesheet" href="../css/bootstrap.min.css">
 <link rel="stylesheet" href="../css/problems.css">
 <script src="../js/problems.js"></script>
+<script src="https://lib.sinaapp.com/js/jquery/2.0.2/jquery-2.0.2.min.js" type="text/javascript">
+</script>
 </head>
 <body>
 	<div class="title">
@@ -26,17 +28,19 @@
 			GetProblem new_get = new GetProblem();
 			ArrayList<String> problem = new_get.Query(grade);
 		%>
-		<form action="Judge.jsp" method="post">
+		<div >
 			<%
-				for (String prob : problem) {
+				for (int i=0;i<problem.size();i++) {
 			%>
-			<span class="pb" id="problem"><%=prob%></span>
-			 <span class="pb" id="answer"><input type="text" /></span><br></br>
+			<span class="pb" id="problem<%=i%>"><%=problem.get(i)%></span>
+			<input class="pb" id="answer<%=i%>" type="text" style="width:100px">
+			<span class="pb" id="right<%=i%>"></span>
+			 <br></br>
 			<%
 				}
 			%>
-			<button class="pbbtn" type="button">提交</button>
-		</form>
+			<button class="pbbtn" type="button" onclick="judge(<%=problem.size()%>)">提交</button>
+		</div>
 	</div>
 
 </body>

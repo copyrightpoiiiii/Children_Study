@@ -1,5 +1,14 @@
 package org.Dao;
+
 import java.sql.*;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 public class Judge{
 	String drv = "com.mysql.cj.jdbc.Driver";
@@ -7,21 +16,16 @@ public class Judge{
 	String usr = "root";
 	String pwd = "949462395";
 
-	public boolean Query(String problem,int answer) {
-		/*
-		 * 传入题面problem和用户的答案answer
-		 * 判断答案是否正确
-		 * 正确时返回true
-		 */
-		boolean existance=false;
-		String sql = "select * from problem where problem='" + problem + "' and answer='" + answer +""+ "'";
+	public boolean doPost(String problem,String answer) {
+		boolean right=false;
+		String sql = "select * from problem where problem='" + problem + "' and answer='" + answer + "';";
 		try {
 			Class.forName(drv);
 			Connection connect = DriverManager.getConnection(url, usr, pwd);
 			Statement stm = connect.createStatement();
 			ResultSet rs = stm.executeQuery(sql);
 			if (rs.next()) {
-				existance = true;
+				right=true;
 			}
 			rs.close();
 			stm.close();
@@ -29,6 +33,12 @@ public class Judge{
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return existance;
+		if(right) {
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
+
 }

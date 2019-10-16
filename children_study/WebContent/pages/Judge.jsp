@@ -11,9 +11,13 @@
 </head>
 <body>
 	<%
-		ArrayList<String> problem = request.getParameter("problem");
-		ArrayList<String> answer = request.getParameter("answer");
-		
+		String problem = request.getParameter("problem");
+		String answer = request.getParameter("answer");
+		Judge check = new Judge();
+		String result = check.judge(problem, answer);
+		if (result == true) {
+			session.setAttribute("username",name);
+ 			pageContext.forward("welcome.jsp");
 	%>
 
 </body>
