@@ -21,7 +21,12 @@
 	<div class="title">
 		<img src="../pics/title2.png" height="60" width=400 />
 	</div>
-	<form action="problems.jsp" method="post">
+	<%
+			String name="";
+			if (request.getParameter("uname") != null)
+				name=request.getParameter("uname").toString();
+		%>
+	<form action="problems.jsp?uname=<%=name%>" method="post">
 		<ul>
 			<li>难度</li>
 		</ul>
@@ -42,7 +47,7 @@
 			<input type="checkbox" id="type4" name="type4" hidden> 
 			<label for="type4" class="pbtype">÷</label>
 		</div>
-		<button class="mybtn" type="submit">GO!</button>
+		<button class="mybtn" type="submit" >GO!</button>
 	</form>
 	<div id="usergreet">
 		<%

@@ -13,14 +13,20 @@ public class GetProblem {
 	String usr = "root";
 	String pwd = "949462395";
 
-	public ArrayList<String> Query(int grade) {
+	public ArrayList<String> Query(int grade,int type1,int type2,int type3,int type4) {
 		/*
 		 * 返回一个包含30条String的数组
 		 * 每道题目为一个String
 		 * 保证难度为grade
 		 */
 		ArrayList<String> problem = new ArrayList<String>();
-		String sql = "SELECT * FROM `problem` WHERE  level = "+grade+""+" ORDER BY Rand() LIMIT 30";
+		String fsql="";
+		int pre=0;
+		if(type1==1) {fsql+="type1="+type1+"";pre=1;}
+		if(type2==1) {if(pre==1)fsql+=" OR ";fsql+="type2="+type2+"";pre=1;}
+		if(type3==1){if(pre==1)fsql+=" OR ";fsql+="type3="+type3+"";pre=1;}
+		if(type4==1){if(pre==1)fsql+=" OR ";fsql+="type4="+type4+"";pre=1;}
+		String sql = "SELECT * FROM `problem` WHERE  level = "+grade+""+" AND ("+fsql+") ORDER BY Rand() LIMIT 30";
 		try {
 			Class.forName(drv);
 			Connection connect = DriverManager.getConnection(url, usr, pwd);

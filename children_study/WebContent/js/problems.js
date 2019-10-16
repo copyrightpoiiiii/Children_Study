@@ -42,9 +42,6 @@ function judge(num) {
 			},
 			error:function(XMLHttpRequest, textStatus, errorThrown){
 				alert("啊哦，出错了QAQ");
-				alert(XMLHttpRequest.status);
-			　　alert(XMLHttpRequest.readyState);
-			　　　alert(textStatus);
 			}
 		});
 	}
