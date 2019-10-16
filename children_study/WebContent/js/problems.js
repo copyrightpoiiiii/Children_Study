@@ -21,18 +21,18 @@ function judge(num) {
 	for (var i = 0; i < num; i++) {
 		var tex = "#problem" + i;
 		var $problem = $(tex).text();
+		$problem=encodeURIComponent($problem);
 		tex = "#answer" + i;
-		var $answer= $(tex).val();
+		var $answer=$(tex).val();
 		$.ajax({
 			type:"post",
 			async:false,
 			url:"../JudgeServlet",
-			contentType:"utf-8",
+			//contentType:"utf-8",
 			data:
 				"problem="+$problem+"&answer="+$answer,
 			success:function(re_data){
 				var nam="#right"+i;
-				alert(re_data);
 				if(re_data=="true"){
 					$(nam).text("正确");
 				}
@@ -44,7 +44,7 @@ function judge(num) {
 				alert("啊哦，出错了QAQ");
 				alert(XMLHttpRequest.status);
 			　　alert(XMLHttpRequest.readyState);
-			　　　　alert(textStatus);
+			　　　alert(textStatus);
 			}
 		});
 	}

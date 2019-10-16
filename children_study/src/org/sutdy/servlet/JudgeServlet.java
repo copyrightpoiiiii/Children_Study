@@ -33,13 +33,13 @@ public class JudgeServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setCharacterEncoding("utf-8");
+		response.setCharacterEncoding("utf-8");
 		String problem=request.getParameter("problem");
 		String answer=request.getParameter("answer");
 		Judge check=new Judge();
 		boolean right=check.doPost(problem, answer);
 		PrintWriter out= response.getWriter();
-		//out.write(problem);
-		out.write(answer);
 		if(right==true) {
 			out.write("true");
 		}

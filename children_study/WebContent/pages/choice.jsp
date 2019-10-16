@@ -14,7 +14,7 @@
 <link rel="stylesheet" href="../css/star-rating.min.css" media="all"
 	type="text/css" />
 <script
-	src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	src="https://lib.sinaapp.com/js/jquery/2.0.2/jquery-2.0.2.min.js"></script>
 <script src="../js/star-rating.js" type="text/javascript"></script>
 </head>
 <body>
