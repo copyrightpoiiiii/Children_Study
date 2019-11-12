@@ -1,0 +1,40 @@
+body{
+    background-color: #8bc34a;
+}
+span{
+    position: absolute;
+    display: inline-block;
+    z-index: 2;
+    color:#ffffff;
+    font-size: 32px;
+}
+#module1{
+    position:relative;
+    margin:80px auto;
+    width: 720px;
+    height: auto;
+    z-index: 1;
+}
+#user{
+    overflow-wrap: break-word;
+    padding: 5px;
+    width: 200px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+#pct{
+    font-size: 35px;
+    top:20%;
+    right: 25%;
+}
+#rank{
+    bottom: 10%;
+    right: 5%;
+}
+#start{
+    bottom: 10%;
+    right: 280px;
+    background-color: #607d8b;
+    border-radius: 3px;
+    padding: 2px 4px;
+}
