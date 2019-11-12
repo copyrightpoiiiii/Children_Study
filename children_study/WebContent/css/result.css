@@ -1,0 +1,9 @@
+.title {
+    position: relative;
+    text-align: center;
+    margin: auto;
+    width: 50%;
+    border-bottom-style: dotted;
+    border-color: #a5d63f;
+    border-bottom-width: 2px;
+}

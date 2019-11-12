@@ -1,0 +1,23 @@
+.title {
+    position: relative;
+    text-align: center;
+    margin: auto;
+    width: 50%;
+    border-bottom-style: dotted;
+    border-color: #a5d63f;
+    border-bottom-width: 2px;
+}
+
+canvas {
+    position: relative;
+    left: 40%;
+}
+
+#res {
+    position: absolute;
+    z-index: 1;
+    left: 25%;
+    font-size: 25px;
+    font-weight: bold;
+    color: #000000;
+}
