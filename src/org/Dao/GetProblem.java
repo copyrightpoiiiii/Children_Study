@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 public class GetProblem {
     String drv = "com.mysql.cj.jdbc.Driver";
-    String url = "jdbc:mysql://localhost:3306/children_study?useSSL=false&serverTimezone=UTC";
+    String url = "jdbc:mysql://localhost:3306/children_study?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true";
     String usr = "root";
     String pwd = "949462395";
 

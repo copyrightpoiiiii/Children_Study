@@ -7,7 +7,7 @@ import java.sql.Statement;
 
 public class Judge {
     String drv = "com.mysql.cj.jdbc.Driver";
-    String url = "jdbc:mysql://localhost:3306/children_study?useSSL=false&serverTimezone=UTC";
+    String url = "jdbc:mysql://localhost:3306/children_study?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true";
     String usr = "root";
     String pwd = "949462395";
 
