@@ -1,16 +1,13 @@
 package servlet;
 
-import java.io.IOException;
-import java.io.PrintWriter;
+import org.Dao.QueryInfo;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import org.Dao.Judge;
-import org.Dao.QueryInfo;
+import java.io.IOException;
 
 /**
  * Servlet implementation class UpdateServlet

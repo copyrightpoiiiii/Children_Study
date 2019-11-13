@@ -8,9 +8,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>$Title$</title>
+    <title>ChildrenStudy</title>
 </head>
+x
 <body>
-$END$
+<%
+    response.sendRedirect("pages/home.jsp");
+%>
 </body>
 </html>

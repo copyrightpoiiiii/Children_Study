@@ -1,8 +1,5 @@
 package servlet;
 
-import java.io.IOException;
-import java.io.PrintWriter;
-
 import org.Dao.UserLogin;
 
 import javax.servlet.ServletException;
@@ -10,8 +7,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import org.Dao.Judge;
+import java.io.IOException;
+import java.io.PrintWriter;
 
 /**
  * Servlet implementation class LoginServlet
