@@ -36,9 +36,15 @@ public class JudgeServlet extends HttpServlet {
         String problem = java.net.URLDecoder.decode(tmp, StandardCharsets.UTF_8);
         tmp = request.getParameter("answer");
         String answer = java.net.URLDecoder.decode(tmp, StandardCharsets.UTF_8);
+        PrintWriter out = response.getWriter();
+        if (answer.length() == 0) {
+            out.write("false");
+            out.close();
+            return;
+        }
+        answer = answer.trim();
         Judge check = new Judge();
         boolean right = check.doPost(problem, answer);
-        PrintWriter out = response.getWriter();
         if (right == true) {
             out.write("true");
         } else {

@@ -164,7 +164,7 @@
                                                  name="uname" placeholder="用户名"> <label for="passwd">密码</label>
         <input type="password" id="passwd" name="upwd" placeholder="密码">
         <button class="pbbtn" type="button"
-                onclick="judge1()">登录
+                onclick="judge()">登录
         </button>
         <br></br>
         <span class="res" id="loginfo"></span>
@@ -185,7 +185,7 @@
                                                         name="pw1" placeholder="请填写密码"> <label for="pw2">请确认密码</label>
         <input type="password" id="pw2" name="pw2" placeholder="请确认密码">
         <button class="pbbtn" type="button"
-                onclick="reg1()">登录
+                onclick="userReg()">登录
         </button>
         <br></br>
         <span class="res" id="regInfo"></span>
