@@ -14,7 +14,9 @@
 
 具体网站可以访问: http://childrenstudy.cf:8888
 
-具体代码详见
+代码仓库位于: https://gitee.com/copyrightpoi/Gifted-Children-Learning
+
+具体代码目录详见
     
 > Children Study
 > > src
