@@ -1,14 +1,43 @@
-# Gifted Children Learning
+# 儿童学习
 
-#### Introduction
+## 简介
 
-2019 HUST Software Engineering Course Design
+2019 华中科技大学 软件工程课程设计
 
-The Third Project
+小组成员： 
+   
+    组长 张淇 U201714466 计卓1701
+    组员 胡玉姝 U201714490 计卓1701
+    
 
-A Web for Genius to Study Mathematics
+儿童学习网站
 
-10.05 update
+具体网站可以访问: http://childrenstudy.cf:8888
+
+具体代码详见
+    
+> Children Study
+> > src
+> > > org.Dao 数据库逻辑 java源代码
+> >
+> > >servlet ajax逻辑 java源代码
+> >
+>
+> > web
+> > > css css源代码
+> >
+> > > js javascript源代码
+> >
+> > > pages 网页源码
+> > 
+> > > pics 图片资源
+
+
+***
+
+##更新记录
+
+###10.05 update
 
 How use an api?
 
